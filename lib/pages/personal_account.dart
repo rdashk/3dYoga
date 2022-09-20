@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:three_d_yoga/model/model.dart';
+import 'package:three_d_yoga/pages/sign_in.dart';
 
 import '../widgets/appbar.dart';
 import '../widgets/drawer.dart';
@@ -44,7 +45,10 @@ class _PersonalAccountState extends State<PersonalAccount> {
   }
 
   logout() {
-
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => SignIn()),
+      );
   }
 }
 

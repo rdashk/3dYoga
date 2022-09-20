@@ -32,7 +32,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width/2,
+      width: MediaQuery.of(context).size.width/4,
       padding: EdgeInsets.only(top: 20, bottom: 20),
       child: Column(
         children: [

@@ -12,7 +12,7 @@ import 'package:three_d_yoga/services/db.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await DB.init();
+  //await DB.init();
   runApp(const MyApp());
 }
 

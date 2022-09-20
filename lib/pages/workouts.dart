@@ -53,7 +53,7 @@ class _WorkoutPageState extends State<WorkoutPage> {
 
   @override
   Widget build(BuildContext context) {
-    //List<Map> workouts = List.generate(10, (index) => {"id": index, "name": "Тренировка $index"}).toList();
+    List<Map> workouts = List.generate(10, (index) => {"id": index, "name": "Тренировка $index"}).toList();
 
     return Scaffold(
         appBar: const MyAppBar(),
@@ -77,7 +77,7 @@ class _WorkoutPageState extends State<WorkoutPage> {
                   childAspectRatio: 3 / 2,
                   crossAxisSpacing: 20,
                   mainAxisSpacing: 20),
-                  itemCount: _items.length,
+                  itemCount: workouts.length,//_items.length,
                   itemBuilder: (BuildContext ctx, index) {
                     return TextButton(
                         onPressed: () {
@@ -86,7 +86,8 @@ class _WorkoutPageState extends State<WorkoutPage> {
                             MaterialPageRoute(builder: (context) => OneWorkout(id: index)),
                           );
                         },
-                        child: _items[index]
+                        child: //_items[index]
+                          OneCard(title: workouts[index]["name"],description: "",)
                     );
                   }),
             ),

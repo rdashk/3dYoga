@@ -37,10 +37,7 @@ class _OneWorkoutState extends State<OneWorkout> {
           Column(
             children: [
               BigText(text: "Тренировка 1"),
-              Text(
-                "\nОписание:\nДанная тренировка направлена на укрепление мышц спины...",
-
-              ),
+              Text("\nОписание:\nДанная тренировка направлена на укрепление мышц спины...",),
               const VideoPlayerScreen(),
               const Text(
                 "Упражнения:",
